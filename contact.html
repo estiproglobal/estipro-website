@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact EstiPro Global — Upload Plans & Get a Quote</title>
+  <meta name="description" content="Send your plans and get a flat estimating quote. Zero upfront, pay after preview. Email estimating@estiproglobal.com or use the quote form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="mark">EP</span> Esti<b>Pro</b> Global</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="construction-estimating.html">Construction Estimating</a></li>
+            <li><a href="quantity-takeoff.html">Quantity Takeoff</a></li>
+            <li><a href="residential-estimating.html">Residential Estimating</a></li>
+            <li><a href="commercial-estimating.html">Commercial Estimating</a></li>
+            <li><a href="trade-specific-services.html">Trade-Specific Services</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Upload Plans</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1>Send your plans. Get a flat quote.</h1>
+      <p class="lead">Tell us the project and the deadline. We&rsquo;ll review the scope, quote one fixed price, and start with zero upfront &mdash; you pay only after you&rsquo;ve seen the preview.</p>
+      <div class="btn-row" style="margin-top:22px;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Upload Plans</a>
+        <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Request a quote</span>
+          <h2>Tell us about the job</h2>
+          <p class="muted">Fill this out or just email your plans straight to <a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a>. The more you share, the faster we can quote it.</p>
+          <form data-quote-form>
+            <div class="form-grid">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
+              <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" /></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
+              <div class="field"><label for="type">What do you need?</label>
+                <select id="type" name="service">
+                  <option>Construction Estimating</option>
+                  <option>Quantity Takeoff</option>
+                  <option>Residential Estimating</option>
+                  <option>Commercial Estimating</option>
+                  <option>Trade-Specific Service</option>
+                  <option>Not sure &mdash; help me decide</option>
+                </select>
+              </div>
+              <div class="field"><label for="deadline">Bid deadline</label><input id="deadline" name="deadline" type="text" placeholder="e.g. next Friday" /></div>
+              <div class="field full"><label for="plans">Link to plans</label><input id="plans" name="plans_link" type="url" placeholder="Dropbox, Google Drive, WeTransfer, etc." /></div>
+              <div class="field full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Trades involved, project size, anything special we should know."></textarea></div>
+            </div>
+            <div class="btn-row" style="margin-top:18px;">
+              <button type="submit" class="btn btn-primary btn-lg">Send &amp; Get a Quote</button>
+            </div>
+            <p class="form-note" data-form-status hidden></p>
+            <p class="form-note" style="margin-top:12px;">No spam, no upfront cost. We only use your details to quote and deliver your estimate.</p>
+          </form>
+        </div>
+        <div class="split-media">
+          <div class="panel">
+            <h3 class="mt-0">Reach us directly</h3>
+            <p style="margin-bottom:6px;"><strong>Email</strong><br><a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a></p>
+            <p style="margin-bottom:6px;"><strong>Phone</strong><br><a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+            <p style="margin-bottom:6px;"><strong>Hours</strong><br>Mon&ndash;Fri, 8am&ndash;6pm CT</p>
+            <p style="margin-bottom:0;"><strong>Coverage</strong><br>General contractors and subs across all 50 states.</p>
+            <hr style="border:none;border-top:1px solid var(--line);margin:22px 0;" />
+            <h3>The deal, again</h3>
+            <ul class="ticks">
+              <li>Send plans &mdash; any trade, any size</li>
+              <li>Get one flat quote</li>
+              <li>We start at $0 upfront</li>
+              <li>See preview files first</li>
+              <li>Pay only if it&rsquo;s good</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Got the plans handy?</h2>
+        <p>Email them now to estimating@estiproglobal.com and we&rsquo;ll come back with a flat price.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-lg">Upload Plans</a>
+          <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><span class="mark">EP</span> Esti<b style="color:var(--amber)">Pro</b> Global</a>
+          <p style="margin-top:14px;">Remote backup estimating and quantity takeoffs for U.S. general contractors and subcontractors. Send plans, get a flat quote, pay after the preview.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="construction-estimating.html">Construction Estimating</a></li>
+            <li><a href="quantity-takeoff.html">Quantity Takeoff</a></li>
+            <li><a href="residential-estimating.html">Residential Estimating</a></li>
+            <li><a href="commercial-estimating.html">Commercial Estimating</a></li>
+            <li><a href="trade-specific-services.html">Trade-Specific Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio / Samples</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a></li>
+            <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+            <li>Serving contractors across the U.S.</li>
+            <li><a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Get a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> EstiPro Global. All rights reserved.</span>
+        <span><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms &amp; Conditions</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
