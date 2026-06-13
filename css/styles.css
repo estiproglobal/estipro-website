@@ -96,7 +96,7 @@ strong { color: var(--navy); }
   color: var(--navy); font-weight: 600; font-size: .95rem; padding: 9px 12px; border-radius: 8px;
 }
 .nav-links a:hover { background: var(--bg-soft); text-decoration: none; }
-.nav-links a.active { color: var(--amber-dark); }
+.nav-links a.active:not(.btn) { color: var(--amber-dark); }
 
 /* dropdown */
 .has-dropdown { position: relative; }
