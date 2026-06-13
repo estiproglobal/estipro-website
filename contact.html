@@ -65,7 +65,9 @@
           <span class="eyebrow">Request a quote</span>
           <h2>Tell us about the job</h2>
           <p class="muted">Fill this out or just email your plans straight to <a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a>. The more you share, the faster we can quote it.</p>
-          <form data-quote-form>
+          <form data-quote-form action="https://formspree.io/f/xrevonpz" method="POST">
+            <input type="hidden" name="_subject" value="New quote request — EstiPro Global website" />
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;" aria-hidden="true" />
             <div class="form-grid">
               <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
               <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" /></div>

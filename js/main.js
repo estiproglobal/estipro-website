@@ -28,30 +28,54 @@
     el.textContent = new Date().getFullYear();
   });
 
-  // ----- Quote / contact form -----
-  // No backend is wired up yet. This gives the visitor immediate feedback
-  // and opens their email client as a fallback. Replace with a real
-  // endpoint (Formspree, Netlify Forms, or your own API) — see README.
+  // ----- Quote / contact form (Formspree AJAX) -----
+  // Submits to the form's `action` (Formspree endpoint) without leaving the
+  // page, and shows an inline status message. Falls back to a normal submit
+  // if JS fails. To change the destination, edit the form's action in
+  // contact.html and the delivery address in your Formspree dashboard.
   document.querySelectorAll("form[data-quote-form]").forEach(function (form) {
+    var status = form.querySelector("[data-form-status]");
+    var submit = form.querySelector("[type=submit]");
+    var submitLabel = submit ? submit.innerHTML : "";
+
+    function show(msg, isError) {
+      if (!status) return;
+      status.hidden = false;
+      status.style.color = isError ? "#c0392b" : "var(--green)";
+      status.textContent = msg;
+    }
+
     form.addEventListener("submit", function (e) {
+      // If there's no endpoint configured, let the browser submit normally.
+      if (!form.action || form.action.indexOf("formspree.io") === -1) return;
       e.preventDefault();
-      var data = new FormData(form);
-      var name = (data.get("name") || "").toString().trim();
-      var subject = encodeURIComponent("Plan / Quote request — " + (name || "New lead"));
-      var lines = [];
-      data.forEach(function (val, key) {
-        if (val) lines.push(key + ": " + val);
+
+      var name = (new FormData(form).get("name") || "").toString().trim();
+      if (submit) { submit.disabled = true; submit.textContent = "Sending…"; }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      }).then(function (response) {
+        if (response.ok) {
+          form.reset();
+          show("Thanks" + (name ? ", " + name : "") + " — we've got your details and will get back to you shortly with a quote. Prefer email? Write to estimating@estiproglobal.com.", false);
+          if (submit) { submit.textContent = "Sent ✓"; }
+        } else {
+          response.json().then(function (d) {
+            var msg = d && d.errors ? d.errors.map(function (x) { return x.message; }).join(", ")
+                                    : "Something went wrong. Please email estimating@estiproglobal.com.";
+            show(msg, true);
+          }).catch(function () {
+            show("Something went wrong. Please email estimating@estiproglobal.com.", true);
+          });
+          if (submit) { submit.disabled = false; submit.innerHTML = submitLabel; }
+        }
+      }).catch(function () {
+        show("Network error — please email estimating@estiproglobal.com.", true);
+        if (submit) { submit.disabled = false; submit.innerHTML = submitLabel; }
       });
-      var body = encodeURIComponent(lines.join("\n"));
-      var status = form.querySelector("[data-form-status]");
-      if (status) {
-        status.hidden = false;
-        status.textContent =
-          "Thanks, " + (name || "there") + " — opening your email app so you can send this to us. " +
-          "Prefer to email directly? Write to estimating@estiproglobal.com.";
-      }
-      window.location.href =
-        "mailto:estimating@estiproglobal.com?subject=" + subject + "&body=" + body;
     });
   });
 })();
