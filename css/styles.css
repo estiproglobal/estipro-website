@@ -130,12 +130,30 @@ strong { color: var(--navy); }
   line-height: 1;
 }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
-.btn-primary { background: var(--amber); color: #20140a; border-color: var(--amber); box-shadow: 0 6px 16px rgba(255,138,30,.32); }
-.btn-primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); color: #fff; }
-.btn-outline { background: transparent; color: var(--navy); border-color: var(--line); }
-.btn-outline:hover { border-color: var(--navy); background: var(--navy); color: #fff; }
-.btn-ghost-light { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.28); }
-.btn-ghost-light:hover { background: #fff; color: var(--navy); }
+/* Lock text color for every link state so focus/active/visited never grey it out */
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active { color: #20140a; }
+.btn-primary { background: var(--amber); border-color: var(--amber); box-shadow: 0 6px 16px rgba(255,138,30,.32); }
+.btn-primary:hover { background: var(--amber-dark); border-color: var(--amber-dark); }
+
+.btn-outline,
+.btn-outline:link,
+.btn-outline:visited { background: transparent; color: var(--navy); border-color: var(--line); }
+.btn-outline:hover,
+.btn-outline:focus { border-color: var(--navy); background: var(--navy); color: #fff; }
+
+.btn-ghost-light,
+.btn-ghost-light:link,
+.btn-ghost-light:visited { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.28); }
+.btn-ghost-light:hover,
+.btn-ghost-light:focus { background: #fff; color: var(--navy); }
+
+/* Accessible focus ring (replaces the inconsistent default) */
+.btn:focus-visible { outline: 3px solid rgba(16,42,67,.45); outline-offset: 2px; }
 .btn-lg { padding: 16px 28px; font-size: 1.05rem; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
 
