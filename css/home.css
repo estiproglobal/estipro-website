@@ -1,0 +1,331 @@
+/* =========================================================
+   EstiPro Global — Homepage Visual Refresh (home.css)
+   Loaded ONLY by index.html, in addition to styles.css.
+   Scoped under .home-rf so nothing here affects other pages.
+   Theme: navy-dominant + amber accent, blueprint textures,
+   CSS-only deliverable mockups. No image assets required.
+   ========================================================= */
+
+.home-rf { --bp-line: rgba(120,160,200,.10); --glass: rgba(255,255,255,.06); }
+
+/* ---------- Blueprint backdrop helpers ---------- */
+.rf-bp {
+  position: relative;
+  background-color: var(--navy-deep);
+  background-image:
+    linear-gradient(var(--bp-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bp-line) 1px, transparent 1px);
+  background-size: 30px 30px;
+  color: #d7e3f0;
+  overflow: hidden;
+}
+.rf-bp::before { /* amber corner glow */
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(720px 420px at 88% -8%, rgba(255,138,30,.20), transparent 60%);
+  pointer-events: none;
+}
+.rf-bp::after { /* soft vignette so content stays readable */
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(120% 120% at 50% 0%, transparent 55%, rgba(5,15,26,.55));
+  pointer-events: none;
+}
+.rf-bp .container { position: relative; z-index: 2; }
+.rf-bp h1, .rf-bp h2, .rf-bp h3 { color: #fff; }
+
+.rf-section { padding: 76px 0; }
+
+/* R2: sharpen the white header on the homepage only */
+.home-rf .site-header { border-bottom: 1px solid #e6edf4; box-shadow: 0 1px 0 rgba(16,42,67,.04), 0 8px 24px rgba(16,42,67,.05); }
+.home-rf .brand-logo { height: 40px; }
+.rf-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 16px;
+}
+.rf-eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--amber); display: inline-block; }
+.rf-head { max-width: 760px; }
+.rf-head.center { margin: 0 auto 40px; text-align: center; }
+.rf-head h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); letter-spacing: -.02em; }
+.rf-head p { font-size: 1.12rem; color: var(--slate); }
+.rf-bp .rf-head p { color: #9fb6cc; }
+
+/* ---------- Buttons (premium variants, build on .btn) ---------- */
+.home-rf .btn-amber {
+  background: linear-gradient(180deg, #ffa23d, var(--amber));
+  color: #1a1205; border-color: var(--amber);
+  box-shadow: 0 10px 26px rgba(255,138,30,.34), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.home-rf .btn-amber:hover { filter: brightness(1.05); color: #1a1205; }
+.home-rf .btn-line {
+  background: rgba(255,255,255,.04); color: #fff;
+  border-color: rgba(255,255,255,.32); backdrop-filter: blur(4px);
+}
+.home-rf .btn-line:hover { background: #fff; color: var(--navy); border-color: #fff; }
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+.rf-hero { padding: 76px 0 96px; }
+.rf-hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: 54px; align-items: center; }
+/* Redesign 1 hero: CTAs side-by-side on desktop, stack only on small mobile */
+.rf-hero .btn-row { flex-wrap: nowrap; }
+.rf-hero .btn-row .btn { flex: 0 0 auto; white-space: nowrap; }
+@media (max-width: 600px) {
+  .rf-hero .btn-row { flex-wrap: wrap; }
+  .rf-hero .btn-row .btn { flex: 1 1 auto; }
+}
+.rf-badge {
+  display: inline-flex; align-items: center; gap: 9px; font-size: .82rem; font-weight: 700;
+  color: #ffd9b0; background: rgba(255,138,30,.12); border: 1px solid rgba(255,138,30,.34);
+  padding: 8px 15px; border-radius: 999px; margin-bottom: 22px;
+}
+.rf-badge .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 0 rgba(255,138,30,.7); animation: rf-pulse 2.2s infinite; }
+@keyframes rf-pulse { 0%{box-shadow:0 0 0 0 rgba(255,138,30,.6)} 70%{box-shadow:0 0 0 9px rgba(255,138,30,0)} 100%{box-shadow:0 0 0 0 rgba(255,138,30,0)} }
+.rf-hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.35rem); line-height: 1.08; letter-spacing: -.025em; margin-bottom: 18px; }
+.rf-hero h1 .amber { color: var(--amber); }
+.rf-hero .rf-lead { font-size: 1.16rem; color: #b6c8da; max-width: 540px; margin-bottom: 26px; }
+.rf-hero .btn-row { gap: 14px; margin-bottom: 26px; }
+.rf-microtrust { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .85rem; color: #8ea6be; }
+.rf-microtrust span { display: inline-flex; align-items: center; gap: 7px; }
+.rf-microtrust .tk { color: var(--amber); font-weight: 900; }
+
+/* ----- Hero stacked mockups ----- */
+.rf-stack { position: relative; min-height: 460px; }
+.rf-card {
+  position: absolute; border-radius: 14px; background: #0e2740;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 30px 60px rgba(2,10,20,.55), inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+/* Plan markup card */
+.mk-plan { top: 0; left: 0; width: 76%; transform: rotate(-2.5deg); z-index: 1; }
+.mk-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .72rem; color: #9db4cb; letter-spacing: .03em; }
+.mk-bar .mk-id { color: #fff; font-weight: 700; }
+.mk-canvas {
+  position: relative; height: 196px; margin: 0; border-radius: 0 0 14px 14px;
+  background-color: #0b2034;
+  background-image: linear-gradient(rgba(120,160,200,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(120,160,200,.12) 1px, transparent 1px);
+  background-size: 18px 18px; overflow: hidden;
+}
+.mk-room { position: absolute; border: 1.5px solid rgba(255,255,255,.55); border-radius: 2px; }
+.mk-fill { position: absolute; border-radius: 2px; mix-blend-mode: screen; }
+.mk-dim { position: absolute; font-size: .6rem; color: #cfe0f0; background: rgba(8,22,38,.7); padding: 1px 4px; border-radius: 3px; }
+.mk-tag { position: absolute; font-size: .58rem; font-weight: 800; color: #16202b; background: var(--amber); padding: 1px 5px; border-radius: 3px; }
+.mk-tick { position: absolute; background: rgba(255,255,255,.4); }
+.mk-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; padding: 9px 14px; font-size: .64rem; color: #aebfd0; }
+.mk-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: middle; }
+
+/* Excel takeoff card */
+.xls { bottom: 28px; right: 0; width: 62%; transform: rotate(2deg); z-index: 3; }
+.xls-top { display: flex; align-items: center; gap: 7px; padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .7rem; color: #cdddee; }
+.xls-top .d { width: 9px; height: 9px; border-radius: 50%; }
+.xls-top .d.r{background:#ff5f57}.xls-top .d.y{background:#febc2e}.xls-top .d.g{background:#28c840}
+.xls-top .fn { margin-left: 6px; color: #9db4cb; }
+.xls-grid { width: 100%; border-collapse: collapse; font-size: .64rem; }
+.xls-grid th, .xls-grid td { padding: 5px 8px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; color: #c4d4e4; }
+.xls-grid th { background: rgba(255,255,255,.04); color: #9db4cb; font-weight: 700; }
+.xls-grid td:last-child, .xls-grid th:last-child { text-align: right; }
+.xls-grid .tot td { background: rgba(255,138,30,.14); color: #fff; font-weight: 800; border-top: 1px solid rgba(255,138,30,.4); }
+.xls-grid .tot td:last-child { color: var(--amber); }
+
+/* Status card */
+.status-card { top: 188px; left: 2%; width: 56%; z-index: 4; background: #112e4a; padding: 16px; transform: rotate(-1deg); }
+.sc-title { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); font-weight: 800; margin-bottom: 12px; display:flex; align-items:center; gap:7px; }
+.sc-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px dashed rgba(255,255,255,.10); font-size: .76rem; }
+.sc-row:last-child { border-bottom: none; }
+.sc-row span { color: #9db4cb; }
+.sc-row strong { color: #fff; font-weight: 700; }
+.sc-badge { background: rgba(40,200,100,.16); color: #5fe39b; border: 1px solid rgba(40,200,100,.4); padding: 3px 9px; border-radius: 999px; font-size: .68rem; font-weight: 700; }
+
+/* =========================================================
+   2. DELIVERABLE PROOF — document-style cards
+   ========================================================= */
+.rf-doc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+.rf-doc {
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  box-shadow: 0 18px 44px rgba(16,42,67,.10); transition: transform .18s ease, box-shadow .18s ease;
+}
+.rf-doc:hover { transform: translateY(-6px); box-shadow: 0 28px 60px rgba(16,42,67,.16); }
+.rf-doc-preview { height: 188px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.rf-doc-body { padding: 22px 22px 24px; }
+.rf-doc-body .tagk { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-dark); }
+.rf-doc-body h3 { margin: 8px 0 8px; font-size: 1.18rem; }
+.rf-doc-body p { margin: 0; color: var(--slate); font-size: .96rem; }
+
+/* doc preview: PDF markup */
+.dp-pdf { background:#0b2034; background-image: linear-gradient(rgba(120,160,200,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,200,.16) 1px,transparent 1px); background-size:16px 16px; }
+.dp-pdf .mk-room{border-color:rgba(255,255,255,.6)}
+/* doc preview: Excel */
+.dp-xls { background: #13334f; display: flex; flex-direction: column; }
+.dp-xls .xls-grid th, .dp-xls .xls-grid td { font-size: .66rem; }
+/* doc preview: scope notes */
+.dp-notes { background: #fbfcfe; padding: 18px 20px; }
+.dp-note-line { height: 8px; border-radius: 4px; background: #e3e9f0; margin-bottom: 10px; }
+.dp-note-line.s { width: 60%; }
+.dp-note-check { display:flex; align-items:center; gap:8px; margin-bottom:10px; font-size:.74rem; color:var(--slate); }
+.dp-note-check b { width:16px;height:16px;border-radius:4px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-size:.6rem;flex:none; }
+.dp-note-flag { display:inline-block; font-size:.66rem; font-weight:700; color:var(--amber-dark); background:rgba(255,138,30,.12); border:1px solid rgba(255,138,30,.3); padding:2px 8px; border-radius:6px; }
+
+/* =========================================================
+   3. PREVIEW vs UNLOCKED module
+   ========================================================= */
+.rf-unlock { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; }
+.rf-pane { padding: 30px; border-radius: 18px; }
+.rf-pane h3 { display: flex; align-items: center; gap: 10px; font-size: 1.18rem; margin: 0 0 6px; }
+.rf-pane .pane-sub { font-size: .9rem; margin: 0 0 20px; }
+.rf-pane-preview { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); }
+.rf-pane-preview h3 { color: #fff; }
+.rf-pane-preview .pane-sub { color: #9db4cb; }
+.rf-pane-unlock { background: linear-gradient(180deg, rgba(255,138,30,.14), rgba(255,138,30,.05)); border: 1px solid rgba(255,138,30,.34); }
+.rf-pane-unlock h3 { color: #fff; }
+.rf-pane-unlock .pane-sub { color: #ffd9b0; }
+.rf-filelist { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.rf-file { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 11px; background: rgba(7,20,34,.5); border: 1px solid rgba(255,255,255,.08); font-size: .92rem; color: #dce7f1; }
+.rf-file .ic { width: 30px; height: 30px; border-radius: 7px; display: grid; place-items: center; font-size: .8rem; font-weight: 800; flex: none; }
+.rf-file .ic.pdf{background:#3a2230;color:#ff8aa0}.rf-file .ic.xls{background:#173a2b;color:#5fe39b}.rf-file .ic.note{background:#2a2336;color:#c9a6ff}.rf-file .ic.zip{background:#2b2a17;color:#ffd24a}
+.rf-file .meta { display: flex; flex-direction: column; }
+.rf-file .meta small { color: #8ea6be; font-size: .72rem; }
+.rf-file .lock { margin-left: auto; font-size: .72rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+.rf-file .lock.prev { background: rgba(120,160,200,.16); color: #b6c8da; }
+.rf-file .lock.open { background: rgba(40,200,100,.16); color: #5fe39b; }
+.rf-pane-preview .rf-file { filter: saturate(.6); }
+.rf-divider-seal { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 22px; gap: 10px; }
+.rf-seal { width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: var(--amber); color: #1a1205; font-size: 1.5rem; box-shadow: 0 0 0 8px rgba(255,138,30,.18), 0 14px 30px rgba(255,138,30,.3); }
+.rf-seal-label { font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); text-align: center; }
+.rf-pay-note { text-align: center; margin-top: 26px; color: #9db4cb; font-size: .95rem; }
+
+/* =========================================================
+   4. PROCESS — connected blueprint line
+   ========================================================= */
+.rf-process { position: relative; display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.rf-process::before { content: ""; position: absolute; top: 27px; left: 8%; right: 8%; height: 2px;
+  background: repeating-linear-gradient(90deg, rgba(255,138,30,.5) 0 12px, transparent 12px 22px); z-index: 0; }
+.rf-step { position: relative; z-index: 1; text-align: center; padding: 0 6px; }
+.rf-step .n { width: 54px; height: 54px; margin: 0 auto 16px; border-radius: 50%;
+  background: var(--navy-deep); border: 2px solid var(--amber); color: var(--amber);
+  font-weight: 800; font-size: 1.2rem; display: grid; place-items: center;
+  box-shadow: 0 0 0 6px rgba(255,138,30,.10); }
+.rf-step h3 { font-size: 1.04rem; margin: 0 0 6px; color: #fff; }
+.rf-step p { font-size: .9rem; color: #9db4cb; margin: 0; }
+
+/* =========================================================
+   5. AUDIENCE cards
+   ========================================================= */
+.rf-aud-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+.rf-aud {
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 26px 22px;
+  position: relative; overflow: hidden; transition: transform .16s ease, box-shadow .16s ease;
+}
+.rf-aud:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.rf-aud::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--amber); }
+.rf-aud .ic { font-size: 1.4rem; margin-bottom: 14px; }
+.rf-aud h3 { font-size: 1.05rem; margin: 0 0 6px; }
+.rf-aud p { margin: 0; color: var(--slate); font-size: .92rem; }
+
+/* =========================================================
+   6. SERVICES — 3 strong cards
+   ========================================================= */
+.rf-serv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.rf-serv {
+  display: block; background: #0e2740; border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px; padding: 30px 26px; color: #d7e3f0; transition: .18s ease; position: relative; overflow: hidden;
+}
+.rf-serv:hover { transform: translateY(-5px); border-color: rgba(255,138,30,.5); text-decoration: none; box-shadow: 0 24px 50px rgba(2,10,20,.5); }
+.rf-serv .num { font-size: .8rem; font-weight: 800; color: var(--amber); letter-spacing: .1em; }
+.rf-serv h3 { color: #fff; font-size: 1.3rem; margin: 12px 0 10px; }
+.rf-serv p { color: #9db4cb; font-size: .95rem; margin: 0 0 18px; }
+.rf-serv .go { font-weight: 700; color: var(--amber); font-size: .92rem; }
+.rf-serv .go::after { content: " →"; }
+
+/* =========================================================
+   FAQ (compact) + CTA reuse base styles
+   ========================================================= */
+.rf-faq { max-width: 820px; margin: 0 auto; }
+.rf-faq details { border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 2px 20px; margin-bottom: 12px; background: rgba(255,255,255,.03); }
+.rf-faq summary { cursor: pointer; font-weight: 700; color: #fff; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 14px; }
+.rf-faq summary::-webkit-details-marker { display: none; }
+.rf-faq summary::after { content: "+"; color: var(--amber); font-size: 1.3rem; }
+.rf-faq details[open] summary::after { content: "–"; }
+.rf-faq p { color: #9db4cb; padding-bottom: 16px; margin: 0; }
+
+.rf-finalcta { text-align: center; max-width: 720px; margin: 0 auto; }
+.rf-finalcta h2 { font-size: clamp(1.8rem,3.4vw,2.6rem); }
+.rf-finalcta p { color: #b6c8da; font-size: 1.12rem; margin: 14px 0 28px; }
+.rf-finalcta .btn-row { justify-content: center; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 960px) {
+  .rf-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .rf-stack { min-height: 420px; max-width: 460px; margin: 0 auto; }
+  .rf-doc-grid, .rf-serv-grid { grid-template-columns: 1fr 1fr; }
+  .rf-aud-grid { grid-template-columns: 1fr 1fr; }
+  .rf-unlock { grid-template-columns: 1fr; gap: 18px; }
+  .rf-divider-seal { flex-direction: row; padding: 6px 0; }
+  .rf-process { grid-template-columns: 1fr 1fr; gap: 30px 22px; }
+  .rf-process::before { display: none; }
+}
+@media (max-width: 600px) {
+  .rf-section { padding: 60px 0; }
+  .rf-doc-grid, .rf-serv-grid, .rf-aud-grid { grid-template-columns: 1fr; }
+  .rf-process { grid-template-columns: 1fr; }
+  .rf-stack { min-height: 0; display: flex; flex-direction: column; gap: 16px; }
+  .rf-stack .rf-card { position: static; width: 100%; transform: none; }
+  .rf-hero h1 { font-size: 2.05rem; }
+}
+
+/* =========================================================
+   REDESIGN 2 — polish layer
+   ========================================================= */
+
+/* ---- line icons (consistent stroke) ---- */
+.rf-ico { display: inline-flex; align-items: center; }
+.rf-ico svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.rf-iconbadge {
+  width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center;
+  background: var(--navy); color: var(--amber); margin-bottom: 16px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+}
+.rf-iconbadge svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---- #2 trust / chip row: centered, intentional wrap ---- */
+.rf-trust { text-align: center; }
+.rf-trust-label { display: block; font-size: .8rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 16px; }
+.rf-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.rf-chips .chip { background: #fff; border: 1px solid var(--line); font-size: .88rem; padding: 8px 16px; box-shadow: var(--shadow-sm); }
+
+/* ---- preview/unlock header + seal icons ---- */
+.rf-pane h3 .rf-ico { margin-right: 4px; color: var(--amber); }
+.rf-pane-preview h3 .rf-ico { color: #9db4cb; }
+.rf-seal svg { width: 26px; height: 26px; stroke: #1a1205; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dp-note-flag .rf-ico svg { width: 13px; height: 13px; stroke-width: 1.8; vertical-align: -2px; margin-right: 3px; }
+.sc-title .sq { width: 11px; height: 11px; border: 2px solid var(--amber); border-radius: 2px; display: inline-block; }
+
+/* ---- #6 service cards: mixed (one dark primary + two light) ---- */
+.rf-serv.light { background: #fff; border: 1px solid var(--line); color: var(--ink); box-shadow: 0 14px 36px rgba(16,42,67,.08); }
+.rf-serv.light h3 { color: var(--navy); }
+.rf-serv.light p { color: var(--slate); }
+.rf-serv.light .num { color: var(--amber-dark); }
+.rf-serv.light .go { color: var(--amber-dark); }
+.rf-serv.light:hover { border-color: var(--amber); box-shadow: 0 22px 48px rgba(16,42,67,.14); }
+.rf-serv.primary { background: linear-gradient(162deg, #143456, #0b2034); border-color: rgba(255,138,30,.42); }
+.rf-serv.primary::before {
+  content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.rf-serv.primary > * { position: relative; z-index: 1; }
+.rf-serv .pill { position: absolute; top: 18px; right: 18px; z-index: 2; font-size: .62rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #1a1205; background: var(--amber); padding: 3px 9px; border-radius: 6px; }
+
+/* ---- #7 footer refinement (homepage only) ---- */
+.home-rf .site-footer { padding: 58px 0 26px; border-top: 2px solid rgba(255,138,30,.5); }
+.home-rf .footer-grid { gap: 44px; }
+.home-rf .footer-brand .brand-logo { height: 38px; }
+.home-rf .footer-brand p { margin-top: 16px; line-height: 1.65; }
+.home-rf .site-footer h4 { font-size: .8rem; letter-spacing: .12em; color: #cfdded; margin-bottom: 18px; }
+.home-rf .footer-links li { margin-bottom: 11px; }
+.home-rf .footer-bottom { margin-top: 38px; padding-top: 22px; }
+
+/* ---- #4 a touch more tightening on dark section heads ---- */
+.rf-bp .rf-head.center { margin-bottom: 38px; }

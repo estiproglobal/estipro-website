@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
   <!-- Favicons -->
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
@@ -21,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://estiproglobal.github.io/estipro-website/assets/brand/estipro-og.png" />
 </head>
-<body>
+<body class="home-rf">
 
   <!-- ===== Header ===== -->
   <header class="site-header">
@@ -48,237 +49,265 @@
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="container hero-grid">
+  <!-- ===== 1. HERO ===== -->
+  <section class="rf-bp rf-hero">
+    <div class="container rf-hero-grid">
       <div>
-        <span class="hero-badge">● Zero upfront — pay only if the work looks good</span>
-        <h1>Your backup estimating team, ready when the bids pile up.</h1>
-        <p class="lead">EstiPro Global does construction cost estimating, quantity takeoffs, and bid support for U.S. general contractors and subs. Send us the plans, we quote a flat price, and you don't pay a dime until you've seen the preview.</p>
-        <ul class="hero-points">
-          <li><span class="tick">✓</span> Color-coded PDF markups + clean Excel takeoffs</li>
-          <li><span class="tick">✓</span> Scope notes, clarifications, and bid-ready quantities</li>
-          <li><span class="tick">✓</span> Fast turnaround when your own team is slammed</li>
-        </ul>
+        <span class="rf-badge"><span class="pulse"></span> Zero upfront — pay only after you see the preview</span>
+        <h1>Your backup estimating team, ready when the <span class="amber">bids pile up</span>.</h1>
+        <p class="rf-lead">Remote takeoffs, cost estimates, and bid support for U.S. general contractors and subs. Send the plans, we mark them up and quote a flat price — you don't pay until you've seen the preview.</p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn-primary btn-lg">Upload Plans</a>
-          <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+          <a href="contact.html" class="btn btn-amber btn-lg">Send Plans for Review</a>
+          <a href="portfolio.html" class="btn btn-line btn-lg">View Sample Takeoff</a>
+        </div>
+        <div class="rf-microtrust">
+          <span><span class="tk">✓</span> Color-coded PDF markups</span>
+          <span><span class="tk">✓</span> Clean Excel takeoffs</span>
+          <span><span class="tk">✓</span> Flat price, fast turnaround</span>
         </div>
       </div>
 
-      <div class="offer-card">
-        <h3>How it works</h3>
-        <ol class="offer-steps">
-          <li><strong>Send your plans</strong><span>Email a link or upload your drawings. Any trade, any size.</span></li>
-          <li><strong>Get a flat quote</strong><span>We review the scope and quote one fixed price. No surprises.</span></li>
-          <li><strong>See a free preview</strong><span>We start with $0 upfront and send preview files to review.</span></li>
-          <li><strong>Pay, then get the files</strong><span>Happy? Pay, and we send the full Excel and source files.</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Trust strip ===== -->
-  <section class="section section--soft" style="padding:34px 0;">
-    <div class="container">
-      <div class="trust-line">
-        <strong style="color:var(--navy)">Built for the way contractors actually bid:</strong>
-        <span class="chip">General Contractors</span>
-        <span class="chip">Subcontractors</span>
-        <span class="chip">Home Builders</span>
-        <span class="chip">Remodelers</span>
-        <span class="chip">Design-Build Firms</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== The offer (deeper) ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="split">
-        <div>
-          <span class="eyebrow">Our best offer</span>
-          <h2>Try us on a real bid with nothing to lose.</h2>
-          <p>Most estimating shops want a deposit before they touch your plans. We don't. Send us the project, we'll quote a flat price, and we'll start the work with <strong>zero upfront payment</strong>.</p>
-          <p>You get preview files first — enough to see the quality and check the numbers. If it's good, you pay and we hand over the full Excel takeoff and source files. If it's not what you needed, you walk away. That's the deal.</p>
-          <div class="btn-row">
-            <a href="contact.html" class="btn btn-primary">Send Plans, Get a Quote</a>
+      <!-- Stacked deliverable mockups -->
+      <div class="rf-stack" aria-hidden="true">
+        <!-- Plan markup -->
+        <div class="rf-card mk-plan">
+          <div class="mk-bar"><span class="mk-id">A-201 · Level 2 Plan</span><span>SCALE 1/8&quot;=1'-0&quot;</span></div>
+          <div class="mk-canvas">
+            <div class="mk-room" style="left:7%;top:14%;width:36%;height:48%"></div>
+            <div class="mk-fill" style="left:7%;top:14%;width:36%;height:48%;background:rgba(255,138,30,.5)"></div>
+            <span class="mk-tag" style="left:10%;top:20%">DW-1</span>
+            <div class="mk-room" style="left:48%;top:14%;width:30%;height:30%"></div>
+            <div class="mk-fill" style="left:48%;top:14%;width:30%;height:30%;background:rgba(58,160,255,.45)"></div>
+            <span class="mk-tag" style="left:51%;top:19%;background:#3aa0ff;color:#06223a">ACT</span>
+            <div class="mk-room" style="left:48%;top:50%;width:45%;height:30%"></div>
+            <div class="mk-fill" style="left:48%;top:50%;width:45%;height:30%;background:rgba(95,227,155,.4)"></div>
+            <span class="mk-tag" style="left:51%;top:55%;background:#5fe39b;color:#063b25">FL-2</span>
+            <span class="mk-dim" style="left:7%;bottom:5%">24'-6&quot;</span>
+            <span class="mk-dim" style="right:6%;top:6%">18'-0&quot;</span>
+            <div class="mk-tick" style="left:7%;top:8%;width:36%;height:1px"></div>
           </div>
+          <div class="mk-legend"><span><i style="background:var(--amber)"></i>Drywall</span><span><i style="background:#3aa0ff"></i>ACT Ceiling</span><span><i style="background:#5fe39b"></i>Flooring</span></div>
         </div>
-        <div class="split-media">
-          <div class="panel">
-            <h3 class="mt-0">What "preview first" means</h3>
-            <ul class="ticks">
-              <li>You see the marked-up drawings and a takeoff summary before paying.</li>
-              <li>You can sanity-check quantities against your own gut and history.</li>
-              <li>Full editable Excel and source files are released after payment.</li>
-              <li>One flat project price agreed up front — no hourly meter running.</li>
-            </ul>
-            <p class="muted mb-0" style="font-size:.92rem;">Simple, low-risk, and built so you can try us on one job before you trust us with ten.</p>
+
+        <!-- Excel takeoff -->
+        <div class="rf-card xls">
+          <div class="xls-top"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="fn">Takeoff_Summary.xlsx</span></div>
+          <table class="xls-grid">
+            <tr><th>Scope</th><th>Unit</th><th>Qty</th></tr>
+            <tr><td>5/8&quot; Drywall</td><td>SF</td><td>4,820</td></tr>
+            <tr><td>Metal Stud Framing</td><td>LF</td><td>1,240</td></tr>
+            <tr><td>ACT Ceiling Grid</td><td>SF</td><td>2,160</td></tr>
+            <tr><td>LVT Flooring</td><td>SF</td><td>3,090</td></tr>
+            <tr class="tot"><td>Line items</td><td></td><td>26</td></tr>
+          </table>
+        </div>
+
+        <!-- Status card -->
+        <div class="rf-card status-card">
+          <div class="sc-title"><span class="sq"></span> Project Status</div>
+          <div class="sc-row"><span>Bid Due</span><strong>Thu &middot; 2:00 PM</strong></div>
+          <div class="sc-row"><span>Scope</span><strong>Drywall + ACT + Flooring</strong></div>
+          <div class="sc-row"><span>Status</span><span class="sc-badge">Takeoff Preview Ready</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. Trust strip ===== -->
+  <section class="section" style="padding:30px 0 26px;">
+    <div class="container">
+      <div class="rf-trust">
+        <span class="rf-trust-label">Built for the way contractors actually bid</span>
+        <div class="rf-chips">
+          <span class="chip">General Contractors</span>
+          <span class="chip">Subcontractors</span>
+          <span class="chip">Home Builders</span>
+          <span class="chip">Remodelers</span>
+          <span class="chip">Design-Build Firms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. Deliverable proof ===== -->
+  <section class="rf-section">
+    <div class="container">
+      <div class="rf-head center">
+        <span class="rf-eyebrow">What lands in your inbox</span>
+        <h2>Files you can hand to a client or drop straight into a bid</h2>
+        <p>No messy spreadsheets to rebuild. Every job comes back as the same clean, labeled set.</p>
+      </div>
+      <div class="rf-doc-grid">
+        <!-- PDF markup -->
+        <article class="rf-doc">
+          <div class="rf-doc-preview dp-pdf">
+            <div class="mk-room" style="left:8%;top:16%;width:40%;height:50%"></div>
+            <div class="mk-fill" style="left:8%;top:16%;width:40%;height:50%;background:rgba(255,138,30,.5)"></div>
+            <div class="mk-room" style="left:54%;top:16%;width:34%;height:34%"></div>
+            <div class="mk-fill" style="left:54%;top:16%;width:34%;height:34%;background:rgba(58,160,255,.45)"></div>
+            <span class="mk-tag" style="left:11%;top:22%">DW-1</span>
+            <span class="mk-dim" style="left:8%;bottom:14%">24'-6&quot;</span>
           </div>
-        </div>
+          <div class="rf-doc-body">
+            <span class="tagk">PDF</span>
+            <h3>Color-coded plan markups</h3>
+            <p>Every counted item highlighted on the drawing, color-coded by scope — so you can verify any number at a glance.</p>
+          </div>
+        </article>
+        <!-- Excel -->
+        <article class="rf-doc">
+          <div class="rf-doc-preview dp-xls">
+            <div class="xls-top"><span class="d r"></span><span class="d y"></span><span class="d g"></span><span class="fn">Takeoff.xlsx</span></div>
+            <table class="xls-grid">
+              <tr><th>Scope</th><th>Unit</th><th>Qty</th></tr>
+              <tr><td>5/8&quot; Drywall</td><td>SF</td><td>4,820</td></tr>
+              <tr><td>Metal Stud</td><td>LF</td><td>1,240</td></tr>
+              <tr><td>ACT Ceiling</td><td>SF</td><td>2,160</td></tr>
+              <tr class="tot"><td>Total lines</td><td></td><td>26</td></tr>
+            </table>
+          </div>
+          <div class="rf-doc-body">
+            <span class="tagk">XLSX</span>
+            <h3>Excel takeoff summary</h3>
+            <p>Quantities organized by trade and scope — formula-driven and editable, ready for you to price your own way.</p>
+          </div>
+        </article>
+        <!-- Scope notes -->
+        <article class="rf-doc">
+          <div class="rf-doc-preview dp-notes">
+            <div class="dp-note-check"><b>✓</b> Included: drywall, ACT, flooring</div>
+            <div class="dp-note-check"><b>✓</b> Excluded: demo, MEP rough-in</div>
+            <div class="dp-note-line"></div>
+            <div class="dp-note-line s"></div>
+            <span class="dp-note-flag"><span class="rf-ico"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span>Clarify: ceiling height on Rm 204</span>
+          </div>
+          <div class="rf-doc-body">
+            <span class="tagk">NOTES</span>
+            <h3>Scope notes &amp; clarifications</h3>
+            <p>What's in, what's out, and where the plans are thin — written in plain English so your bid has no surprises.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Who we help ===== -->
-  <section class="section section--soft">
+  <!-- ===== 4. Process ===== -->
+  <section class="rf-bp rf-section">
     <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Who we help</span>
-        <h2>Overflow estimating for busy U.S. contractors</h2>
-        <p class="lead">When the bids stack up faster than your team can handle them, we're the extra estimator on call.</p>
-      </div>
-      <div class="grid grid-4">
-        <div class="card">
-          <div class="icon-badge">🏗️</div>
-          <h3>General Contractors</h3>
-          <p>Bid more jobs without hiring. We cover the overflow so you never skip a bid because you ran out of hours.</p>
-        </div>
-        <div class="card">
-          <div class="icon-badge">🔧</div>
-          <h3>Subcontractors</h3>
-          <p>Trade-specific takeoffs and pricing for concrete, framing, drywall, electrical, plumbing, and more.</p>
-        </div>
-        <div class="card">
-          <div class="icon-badge">🏠</div>
-          <h3>Home Builders</h3>
-          <p>Quantity breakdowns and budgets for new builds and production homes, ready to drop into your bid.</p>
-        </div>
-        <div class="card">
-          <div class="icon-badge">🔨</div>
-          <h3>Remodelers</h3>
-          <p>Clear takeoffs and scope notes for renovations and additions, so your client quote actually holds up.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== What we deliver ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">What you get</span>
-        <h2>Files you can hand to a client or drop into a bid</h2>
-        <p class="lead">No messy spreadsheets you have to rebuild. Everything is clean, labeled, and ready to use.</p>
-      </div>
-      <div class="grid grid-2">
-        <div class="card amber">
-          <div class="icon-badge">📐</div>
-          <h3>Color-coded PDF markups</h3>
-          <p>Every drawing marked up so you can see exactly what was counted and where. Nothing hidden, nothing guessed.</p>
-        </div>
-        <div class="card amber">
-          <div class="icon-badge">📊</div>
-          <h3>Excel takeoff summaries</h3>
-          <p>Organized quantity breakdowns by scope and trade — editable, formula-driven, and easy to price your way.</p>
-        </div>
-        <div class="card amber">
-          <div class="icon-badge">📝</div>
-          <h3>Scope notes & clarifications</h3>
-          <p>What's in, what's out, and where the plans are unclear — written down so your bid has no surprises.</p>
-        </div>
-        <div class="card amber">
-          <div class="icon-badge">🤝</div>
-          <h3>Bid support</h3>
-          <p>Need a second look before the deadline, or help shaping the number? We stay on it until the bid is in.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Why choose us ===== -->
-  <section class="section section--navy">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Why contractors stick with us</span>
-        <h2 style="color:#fff">A backup estimator that feels like part of your team</h2>
-      </div>
-      <div class="grid grid-4">
-        <div>
-          <div class="icon-badge">⚡</div>
-          <h3 style="color:#fff">Fast turnaround</h3>
-          <p>We move on your deadline, not ours. Tell us the bid date and we'll tell you straight if we can hit it.</p>
-        </div>
-        <div>
-          <div class="icon-badge">➕</div>
-          <h3 style="color:#fff">Overflow on demand</h3>
-          <p>Use us for one job or fifty. Scale up when bids spike, scale down when they don't. No retainer.</p>
-        </div>
-        <div>
-          <div class="icon-badge">🏷️</div>
-          <h3 style="color:#fff">Flat pricing</h3>
-          <p>One agreed price per project. You know the cost before we start — no hourly meter, no creep.</p>
-        </div>
-        <div>
-          <div class="icon-badge">📁</div>
-          <h3 style="color:#fff">Clear, usable files</h3>
-          <p>Markups and Excel that make sense the first time you open them — not a puzzle you have to redo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Process steps ===== -->
-  <section class="section section--soft">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">The process</span>
+      <div class="rf-head center">
+        <span class="rf-eyebrow">How it works</span>
         <h2>From plans to bid-ready in four steps</h2>
       </div>
-      <div class="steps">
-        <div class="step"><div class="n">1</div><h3>Send the plans</h3><p>Upload drawings or share a link. Tell us the trades, the deadline, and anything special.</p></div>
-        <div class="step"><div class="n">2</div><h3>Get your quote</h3><p>We review the scope and send back one flat price plus a realistic turnaround.</p></div>
-        <div class="step"><div class="n">3</div><h3>Review the preview</h3><p>We start at $0 upfront and send preview files so you can check the quality and numbers.</p></div>
-        <div class="step"><div class="n">4</div><h3>Pay & get files</h3><p>Approve it, pay the flat price, and we release the full Excel takeoff and source files.</p></div>
+      <div class="rf-process">
+        <div class="rf-step"><div class="n">1</div><h3>Send plans</h3><p>Upload drawings or share a link. Any trade, any size — tell us the bid date.</p></div>
+        <div class="rf-step"><div class="n">2</div><h3>Scope review</h3><p>We review the documents and quote one flat price with a realistic turnaround.</p></div>
+        <div class="rf-step"><div class="n">3</div><h3>Marked-up preview</h3><p>We start at $0 upfront and send preview files so you can check the work.</p></div>
+        <div class="rf-step"><div class="n">4</div><h3>Pay &amp; unlock</h3><p>Approve it, pay the flat price, and get the full editable Excel and source files.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Services overview ===== -->
-  <section class="section">
+  <!-- ===== 5. Audience ===== -->
+  <section class="rf-section section--soft">
     <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">What we estimate</span>
-        <h2>Pick the help you need</h2>
+      <div class="rf-head center">
+        <span class="rf-eyebrow">Who we help</span>
+        <h2>An extra estimator, on call</h2>
+        <p>When the bids stack up faster than your team can handle them.</p>
       </div>
-      <div class="grid grid-3">
-        <a href="construction-estimating.html" class="card">
-          <h3>Construction Estimating</h3>
-          <p>Full cost estimates with quantities, labor, and material pricing for whole-project bids.</p>
-          <span class="card-link">Learn more</span>
+      <div class="rf-aud-grid">
+        <div class="rf-aud">
+          <div class="rf-iconbadge"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16"/><path d="M19 21V11a1 1 0 0 0-1-1h-3"/><path d="M9 8h2M9 12h2M9 16h2"/></svg></div>
+          <h3>General Contractors</h3><p>Too many bids, not enough estimating time.</p>
+        </div>
+        <div class="rf-aud">
+          <div class="rf-iconbadge"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.3L3 18l3 3 6.4-6.4a4 4 0 0 0 5.3-5.4l-2.7 2.7-2-2 2.4-2.6z"/></svg></div>
+          <h3>Subcontractors</h3><p>Need quantities fast so you can price your way.</p>
+        </div>
+        <div class="rf-aud">
+          <div class="rf-iconbadge"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+          <h3>Home Builders</h3><p>Clean budgets and material breakdowns.</p>
+        </div>
+        <div class="rf-aud">
+          <div class="rf-iconbadge"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 12l2 2 4-4"/></svg></div>
+          <h3>Remodelers</h3><p>Scope notes that prevent quote surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. Preview vs Unlocked ===== -->
+  <section class="rf-bp rf-section">
+    <div class="container">
+      <div class="rf-head center">
+        <span class="rf-eyebrow">The zero-upfront deal</span>
+        <h2>See the work before you pay a dime</h2>
+        <p>We start with no deposit and send preview files first. Pay only when you're happy — then the full files unlock.</p>
+      </div>
+      <div class="rf-unlock">
+        <div class="rf-pane rf-pane-preview">
+          <h3><span class="rf-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span> Preview before payment</h3>
+          <p class="pane-sub">Enough to judge the quality and check the numbers.</p>
+          <ul class="rf-filelist">
+            <li class="rf-file"><span class="ic pdf">PDF</span><span class="meta">Marked-up drawings<small>Watermarked preview</small></span><span class="lock prev">Preview</span></li>
+            <li class="rf-file"><span class="ic xls">XLS</span><span class="meta">Takeoff summary<small>Read-only view</small></span><span class="lock prev">Preview</span></li>
+            <li class="rf-file"><span class="ic note">TXT</span><span class="meta">Scope notes<small>Inclusions &amp; flags</small></span><span class="lock prev">Preview</span></li>
+          </ul>
+        </div>
+
+        <div class="rf-divider-seal">
+          <div class="rf-seal"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.8"/></svg></div>
+          <div class="rf-seal-label">Pay<br>to unlock</div>
+        </div>
+
+        <div class="rf-pane rf-pane-unlock">
+          <h3><span class="rf-ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-1.8"/></svg></span> Unlocked after payment</h3>
+          <p class="pane-sub">The working files, yours to use and edit.</p>
+          <ul class="rf-filelist">
+            <li class="rf-file"><span class="ic xls">XLS</span><span class="meta">Editable Excel takeoff<small>Formulas intact</small></span><span class="lock open">Unlocked</span></li>
+            <li class="rf-file"><span class="ic pdf">PDF</span><span class="meta">Final clean files<small>Full-resolution</small></span><span class="lock open">Unlocked</span></li>
+            <li class="rf-file"><span class="ic zip">ZIP</span><span class="meta">Source / working files<small>When applicable</small></span><span class="lock open">Unlocked</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="rf-pay-note">One flat project price, agreed up front. No hourly meter, no deposit, no surprises.</p>
+    </div>
+  </section>
+
+  <!-- ===== 7. Services (3 strong) ===== -->
+  <section class="rf-section section--soft">
+    <div class="container">
+      <div class="rf-head center">
+        <span class="rf-eyebrow">What we do</span>
+        <h2>Three ways we cover your estimating</h2>
+        <p>Use us for one piece or the whole bid — scale up when work spikes, scale down when it doesn't.</p>
+      </div>
+      <div class="rf-serv-grid">
+        <a href="quantity-takeoff.html" class="rf-serv light">
+          <span class="num">01</span>
+          <h3>Quantity Takeoffs</h3>
+          <p>Measured, color-coded quantities by trade and scope — the accurate foundation under every bid.</p>
+          <span class="go">See takeoffs</span>
         </a>
-        <a href="quantity-takeoff.html" class="card">
-          <h3>Quantity Takeoff</h3>
-          <p>Measured, marked-up quantities by trade — the foundation for any accurate bid.</p>
-          <span class="card-link">Learn more</span>
+        <a href="construction-estimating.html" class="rf-serv primary">
+          <span class="pill">Most used</span>
+          <span class="num">02</span>
+          <h3>Cost Estimates</h3>
+          <p>Full priced estimates — quantities, labor, and material — organized into a number you can bid with confidence.</p>
+          <span class="go">See estimating</span>
         </a>
-        <a href="residential-estimating.html" class="card">
-          <h3>Residential Estimating</h3>
-          <p>New builds, additions, and remodels priced out for builders and remodelers.</p>
-          <span class="card-link">Learn more</span>
-        </a>
-        <a href="commercial-estimating.html" class="card">
-          <h3>Commercial Estimating</h3>
-          <p>Offices, retail, multifamily, and light industrial — detailed and bid-ready.</p>
-          <span class="card-link">Learn more</span>
-        </a>
-        <a href="trade-specific-services.html" class="card">
-          <h3>Trade-Specific Services</h3>
-          <p>Concrete, framing, drywall, electrical, plumbing, mechanical, sitework, and more.</p>
-          <span class="card-link">Learn more</span>
-        </a>
-        <a href="portfolio.html" class="card">
-          <h3>Sample Estimates</h3>
-          <p>See real examples of our markups, takeoffs, and scope notes before you send a job.</p>
-          <span class="card-link">View samples</span>
+        <a href="services.html" class="rf-serv light">
+          <span class="num">03</span>
+          <h3>Bid Overflow Support</h3>
+          <p>An on-call estimator for the weeks the bids pile up. No retainer, no hiring — just backup when you need it.</p>
+          <span class="go">See all services</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section section--soft">
+  <!-- ===== 8. FAQ ===== -->
+  <section class="section">
     <div class="container">
       <div class="section-head center">
         <span class="eyebrow">Straight answers</span>
@@ -287,7 +316,7 @@
       <div class="faq">
         <details open>
           <summary>Do I really pay nothing upfront?</summary>
-          <p>Correct. We start the work with zero upfront payment and send you preview files. You only pay once you've seen the preview and you're happy with it. After payment, we send the full Excel and source files.</p>
+          <p>Correct. We start the work with zero upfront and send preview files. You only pay once you've seen the preview and you're happy. After payment, we release the full Excel and source files.</p>
         </details>
         <details>
           <summary>How fast can you turn an estimate around?</summary>
@@ -295,29 +324,26 @@
         </details>
         <details>
           <summary>Are you replacing my estimator?</summary>
-          <p>No. Think of us as your backup or overflow estimator. Use us when your own team is buried, when a bid lands at a bad time, or when you want a second set of eyes on the numbers.</p>
+          <p>No — think of us as your backup or overflow estimator. Use us when your own team is buried, when a bid lands at a bad time, or when you want a second set of eyes on the numbers.</p>
         </details>
         <details>
           <summary>What software and formats do you work in?</summary>
-          <p>We deliver color-coded PDF markups and editable Excel takeoffs that drop straight into your bidding process. If you have a preferred format or template, tell us and we'll match it.</p>
-        </details>
-        <details>
-          <summary>What does it cost?</summary>
-          <p>One flat price per project, agreed before we start. No hourly billing and no surprise add-ons. Send the plans and we'll quote it.</p>
+          <p>We deliver color-coded PDF markups and editable Excel takeoffs that drop straight into your bidding process. If you have a preferred template, send it and we'll match it.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA band ===== -->
-  <section class="section">
+  <!-- ===== 9. Final CTA ===== -->
+  <section class="rf-bp rf-section">
     <div class="container">
-      <div class="cta-band">
+      <div class="rf-finalcta">
+        <span class="rf-eyebrow" style="justify-content:center;">Try us on one bid</span>
         <h2>Send us a set of plans. See the preview. Then decide.</h2>
-        <p>That's the whole pitch. Zero upfront, flat price, files you can actually use. Try us on your next bid.</p>
+        <p>That's the whole pitch — zero upfront, flat price, files you can actually use.</p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn-primary btn-lg">Upload Plans</a>
-          <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+          <a href="contact.html" class="btn btn-amber btn-lg">Send Plans for Review</a>
+          <a href="portfolio.html" class="btn btn-line btn-lg">View Sample Takeoff</a>
         </div>
       </div>
     </div>
