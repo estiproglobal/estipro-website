@@ -1,0 +1,102 @@
+/* =========================================================
+   EstiPro Global — Inner Pages alignment (pages.css)
+   Loaded by inner pages alongside styles.css + home.css.
+   Reuses the homepage .rf-* system; adds inner-page pieces.
+   Scoped under .home-rf where it could touch shared elements.
+   ========================================================= */
+
+/* ---------- Inner page hero (compact version of homepage hero) ---------- */
+.rf-phero { padding: 56px 0 60px; }
+.rf-phero .breadcrumb { font-size: .82rem; color: #8ea6be; margin-bottom: 16px; }
+.rf-phero .breadcrumb a { color: #b6c8da; }
+.rf-phero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); line-height: 1.1; letter-spacing: -.02em; max-width: 800px; margin-bottom: 16px; }
+.rf-phero h1 .amber { color: var(--amber); }
+.rf-phero .rf-lead { font-size: 1.14rem; color: #b6c8da; max-width: 640px; margin-bottom: 24px; }
+.rf-phero .btn-row { gap: 14px; flex-wrap: wrap; }
+.rf-phero .rf-microtrust { margin-top: 22px; }
+
+/* ---------- Service category cards (premium white) ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.svc-card {
+  display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line);
+  border-radius: 16px; padding: 26px 24px; box-shadow: 0 12px 32px rgba(16,42,67,.07);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 22px 46px rgba(16,42,67,.14); border-color: #cdd8e4; text-decoration: none; }
+.svc-card h3 { font-size: 1.18rem; margin: 0 0 8px; color: var(--navy); }
+.svc-card p { margin: 0 0 18px; color: var(--slate); font-size: .96rem; }
+.svc-card .go { margin-top: auto; font-weight: 700; color: var(--amber-dark); font-size: .92rem; }
+.svc-card .go::after { content: " →"; }
+
+/* ---------- Sample cards (portfolio) ---------- */
+.sample-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.sample-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 32px rgba(16,42,67,.07); display: flex; flex-direction: column; }
+.sample-thumb { height: 132px; position: relative; border-bottom: 1px solid var(--line);
+  background-color: #0b2034; background-image: linear-gradient(rgba(120,160,200,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,200,.16) 1px,transparent 1px); background-size: 16px 16px; overflow: hidden; }
+.sample-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.sample-body .tag { margin-bottom: 10px; }
+.sample-body h3 { font-size: 1.1rem; margin: 0 0 12px; color: var(--navy); }
+.sample-spec { list-style: none; padding: 0; margin: 0 0 18px; font-size: .9rem; }
+.sample-spec li { display: flex; gap: 8px; padding: 5px 0; color: var(--slate); border-bottom: 1px dashed var(--line); }
+.sample-spec li:last-child { border-bottom: none; }
+.sample-spec b { color: var(--navy); font-weight: 700; min-width: 96px; flex: none; }
+.sample-card .btn { margin-top: auto; }
+
+/* ---------- Good fit / not a fit ---------- */
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.fit-col { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.fit-col.no { background: var(--bg-soft); }
+.fit-col h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; margin: 0 0 16px; }
+.fit-list { list-style: none; padding: 0; margin: 0; }
+.fit-list li { display: flex; gap: 11px; padding: 8px 0; color: var(--slate); font-size: .96rem; }
+.fit-list li svg { width: 19px; height: 19px; flex: none; margin-top: 2px; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fit-col .yes-i { stroke: var(--green); }
+.fit-col .no-i { stroke: var(--slate-light); }
+
+/* ---------- Contact form card + reassurance ---------- */
+.rf-formcard { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: 0 16px 40px rgba(16,42,67,.08); }
+.rf-upload-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 13px; padding: 18px 20px; margin-bottom: 22px; }
+.rf-upload-cta strong { color: var(--navy); display: block; }
+.rf-upload-cta span.sub { font-size: .9rem; color: var(--slate); }
+.reassure { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.reassure li { display: flex; gap: 12px; align-items: flex-start; color: #cdd9e6; font-size: .96rem; }
+.reassure li svg { width: 22px; height: 22px; flex: none; stroke: var(--amber); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+.reassure li strong { color: #fff; display: block; font-weight: 700; }
+
+/* contact panel on navy */
+.rf-contact-panel { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; padding: 28px; }
+.rf-contact-panel h3 { color: #fff; }
+.rf-contact-panel .ci { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+.rf-contact-panel .ci svg { width: 20px; height: 20px; flex: none; stroke: var(--amber); fill: none; stroke-width: 1.7; margin-top: 3px; }
+.rf-contact-panel .ci small { display: block; color: #8ea6be; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+.rf-contact-panel .ci a, .rf-contact-panel .ci span { color: #dce7f1; }
+
+/* ---------- About blocks ---------- */
+.about-lead { max-width: 760px; }
+.about-lead p { font-size: 1.08rem; color: var(--slate); }
+.stat-band { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; text-align: center; }
+.stat-band .num { font-size: 2rem; font-weight: 800; color: #fff; }
+.stat-band .lab { color: #9db4cb; font-size: .9rem; }
+
+/* ---------- Legal pages ---------- */
+.legal { max-width: 820px; margin: 0 auto; }
+.legal h2 { font-size: 1.3rem; margin: 30px 0 10px; }
+.legal p { color: var(--slate); }
+.legal em { color: var(--slate-light); }
+
+/* ---------- icon badge sizing for service cards ---------- */
+.svc-card .rf-iconbadge, .sample-thumb + * .rf-iconbadge { margin-bottom: 16px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 960px) {
+  .svc-grid, .sample-grid { grid-template-columns: 1fr 1fr; }
+  .stat-band { grid-template-columns: 1fr 1fr; gap: 26px; }
+}
+@media (max-width: 700px) {
+  .fit-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .svc-grid, .sample-grid { grid-template-columns: 1fr; }
+  .rf-phero { padding: 44px 0 48px; }
+  .rf-formcard { padding: 22px; }
+}

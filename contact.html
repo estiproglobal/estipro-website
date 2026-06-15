@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact EstiPro Global — Upload Plans & Get a Quote</title>
-  <meta name="description" content="Send your plans and get a flat estimating quote. Zero upfront, pay after preview. Email estimating@estiproglobal.com or use the quote form." />
+  <title>Contact EstiPro Global — Send the Plans, Get a Scope Review</title>
+  <meta name="description" content="Send your plans and get a flat estimating quote. Zero upfront, pay after preview. Upload drawings or share a plan link; we review scope before quoting." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Favicons -->
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-  <!-- Open Graph / link preview -->
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://estiproglobal.github.io/estipro-website/assets/brand/estipro-og.png" />
   <meta property="og:image:width" content="1200" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://estiproglobal.github.io/estipro-website/assets/brand/estipro-og.png" />
 </head>
-<body>
+<body class="home-rf">
 
   <header class="site-header">
     <div class="container nav">
@@ -46,91 +46,84 @@
       </ul>
     </div>
   </header>
-
-  <section class="page-hero">
+  <section class="rf-bp rf-phero">
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
-      <h1>Send your plans. Get a flat quote.</h1>
-      <p class="lead">Tell us the project and the deadline. We&rsquo;ll review the scope, quote one fixed price, and start with zero upfront &mdash; you pay only after you&rsquo;ve seen the preview.</p>
-      <div class="btn-row" style="margin-top:22px;">
-        <a href="https://www.dropbox.com/request/cfn0sp74ikt6ejnf6wyi" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Upload Plans</a>
-        <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+      <h1>Send the plans. <span class="amber">We'll review the scope first</span>.</h1>
+      <p class="rf-lead">Upload drawings or share a plan link. We'll check the scope, quote a flat price, and tell you the turnaround before starting.</p>
+      <div class="btn-row">
+        <a href="#form" class="btn btn-amber btn-lg">Send Project Files</a>
+        <a href="https://www.dropbox.com/request/cfn0sp74ikt6ejnf6wyi" target="_blank" rel="noopener" class="btn btn-line btn-lg">Upload Plan Files</a>
       </div>
+      <div class="rf-microtrust"><span><span class="tk">&#10003;</span> Color-coded PDF markups</span><span><span class="tk">&#10003;</span> Clean Excel takeoffs</span><span><span class="tk">&#10003;</span> Flat price, fast turnaround</span></div>
     </div>
   </section>
-  <section class="section">
+  <section class="rf-section" id="form">
     <div class="container">
       <div class="split">
         <div>
-          <span class="eyebrow">Request a quote</span>
-          <h2>Tell us about the job</h2>
-          <p class="muted">Fill this out or just email your plans straight to <a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a>. The more you share, the faster we can quote it.</p>
-          <div class="panel" style="padding:18px 20px;margin-bottom:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between;">
-            <div style="flex:1;min-width:220px;">
-              <strong style="color:var(--navy);display:block;">Got big plan files?</strong>
-              <span class="muted" style="font-size:.92rem;">Upload them straight to us &mdash; any size, no account needed. Then fill the form below so we have your name, number, and deadline.</span>
+          <span class="rf-eyebrow" style="color:var(--amber-dark)">Request a scope review</span>
+          <h2 style="color:var(--navy)">Tell us about the job</h2>
+          <p class="muted">Fill this out or email your plans to <a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a>. The more you share, the faster we can quote it.</p>
+          <div class="rf-formcard">
+            <div class="rf-upload-cta">
+              <div><strong>Got big plan files?</strong><span class="sub">Upload them straight to us &mdash; any size, no account needed.</span></div>
+              <a href="https://www.dropbox.com/request/cfn0sp74ikt6ejnf6wyi" target="_blank" rel="noopener" class="btn btn-primary nowrap"><span class="rf-ico" style="margin-right:6px"><svg viewBox="0 0 24 24" style="width:17px;height:17px"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 16v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/></svg></span>Upload plan files</a>
             </div>
-            <a href="https://www.dropbox.com/request/cfn0sp74ikt6ejnf6wyi" target="_blank" rel="noopener" class="btn btn-primary nowrap">&#128228; Upload plan files</a>
-          </div>
-          <form data-quote-form action="https://formspree.io/f/xrevonpz" method="POST">
-            <input type="hidden" name="_subject" value="New quote request — EstiPro Global website" />
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;" aria-hidden="true" />
-            <div class="form-grid">
-              <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
-              <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" /></div>
-              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
-              <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
-              <div class="field"><label for="type">What do you need?</label>
-                <select id="type" name="service">
-                  <option>Construction Estimating</option>
-                  <option>Quantity Takeoff</option>
-                  <option>Residential Estimating</option>
-                  <option>Commercial Estimating</option>
-                  <option>Trade-Specific Service</option>
-                  <option>Not sure &mdash; help me decide</option>
-                </select>
+            <form data-quote-form action="https://formspree.io/f/xrevonpz" method="POST">
+              <input type="hidden" name="_subject" value="New quote request — EstiPro Global website" />
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;" aria-hidden="true" />
+              <div class="form-grid">
+                <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
+                <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" /></div>
+                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+                <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
+                <div class="field"><label for="project">Project name</label><input id="project" name="project" type="text" /></div>
+                <div class="field"><label for="service">Trade / scope needed</label>
+                  <select id="service" name="service">
+                    <option>Construction Estimating</option><option>Quantity Takeoff</option>
+                    <option>Residential Estimating</option><option>Commercial Estimating</option>
+                    <option>Trade-Specific Service</option><option>Not sure &mdash; help me decide</option>
+                  </select>
+                </div>
+                <div class="field"><label for="deadline">Bid due date</label><input id="deadline" name="deadline" type="text" placeholder="e.g. next Friday" /></div>
+                <div class="field"><label for="plans">Link to plans</label><input id="plans" name="plans_link" type="url" placeholder="Dropbox, Drive, WeTransfer" /></div>
+                <div class="field full"><label for="message">Message / notes</label><textarea id="message" name="message" placeholder="Trades involved, project size, anything special."></textarea></div>
               </div>
-              <div class="field"><label for="deadline">Bid deadline</label><input id="deadline" name="deadline" type="text" placeholder="e.g. next Friday" /></div>
-              <div class="field full"><label for="plans">Link to plans</label><input id="plans" name="plans_link" type="url" placeholder="Dropbox, Google Drive, WeTransfer, etc." /></div>
-              <div class="field full"><label for="message">Project details</label><textarea id="message" name="message" placeholder="Trades involved, project size, anything special we should know."></textarea></div>
-            </div>
-            <div class="btn-row" style="margin-top:18px;">
-              <button type="submit" class="btn btn-primary btn-lg">Send &amp; Get a Quote</button>
-            </div>
-            <p class="form-note" data-form-status hidden></p>
-            <p class="form-note" style="margin-top:12px;">No spam, no upfront cost. We only use your details to quote and deliver your estimate.</p>
-          </form>
+              <div class="btn-row" style="margin-top:18px;"><button type="submit" class="btn btn-primary btn-lg">Send Project Files</button></div>
+              <p class="form-note" data-form-status hidden></p>
+              <p class="form-note" style="margin-top:12px;">No spam, no upfront cost. We only use your details to quote and deliver your estimate.</p>
+            </form>
+          </div>
         </div>
         <div class="split-media">
-          <div class="panel">
+          <div class="rf-contact-panel">
             <h3 class="mt-0">Reach us directly</h3>
-            <p style="margin-bottom:6px;"><strong>Email</strong><br><a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a></p>
-            <p style="margin-bottom:6px;"><strong>Phone</strong><br><a href="tel:+16362288421">+1 (636) 228-8421</a></p>
-            <p style="margin-bottom:6px;"><strong>Hours</strong><br>Mon&ndash;Fri, 8am&ndash;6pm CT</p>
-            <p style="margin-bottom:0;"><strong>Coverage</strong><br>General contractors and subs across all 50 states.</p>
-            <hr style="border:none;border-top:1px solid var(--line);margin:22px 0;" />
-            <h3>The deal, again</h3>
-            <ul class="ticks">
-              <li>Send plans &mdash; any trade, any size</li>
-              <li>Get one flat quote</li>
-              <li>We start at $0 upfront</li>
-              <li>See preview files first</li>
-              <li>Pay only if it&rsquo;s good</li>
+            <div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small>Email</small><a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a></div></div>
+            <div class="ci"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Phone</small><a href="tel:+16362288421">+1 (636) 228-8421</a></div></div>
+            <div class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small>Hours</small><span>Mon&ndash;Fri, 8am&ndash;6pm CT</span></div></div>
+            <div class="ci"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><small>Coverage</small><span>Contractors across all 50 states</span></div></div>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,.12);margin:20px 0;" />
+            <h3>Why it's low-risk</h3>
+            <ul class="reassure">
+              <li><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><div><strong>We review scope before quoting</strong>No blind pricing &mdash; we read the documents first.</div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><div><strong>Marked-up preview first</strong>You see the work before any files are released.</div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><strong>No upfront on your first job</strong>Approved work, paid after preview. Try us with nothing to lose.</div></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="section">
+  <section class="rf-bp rf-section">
     <div class="container">
-      <div class="cta-band">
-        <h2>Got the plans handy?</h2>
-        <p>Email them now to estimating@estiproglobal.com and we&rsquo;ll come back with a flat price.</p>
+      <div class="rf-finalcta">
+        <span class="rf-eyebrow" style="justify-content:center;">Try us on one bid</span>
+        <h2>Send us a set of plans. See the preview. Then decide.</h2>
+        <p>That's the whole pitch &mdash; zero upfront, flat price, files you can actually use.</p>
         <div class="btn-row">
-          <a href="https://www.dropbox.com/request/cfn0sp74ikt6ejnf6wyi" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Upload Plans</a>
-          <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+          <a href="contact.html" class="btn btn-amber btn-lg">Send Plans for Review</a>
+          <a href="portfolio.html" class="btn btn-line btn-lg">View Sample Takeoff</a>
         </div>
       </div>
     </div>

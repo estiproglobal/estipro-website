@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found — EstiPro Global</title>
+  <meta name="description" content="Page not found." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Favicons -->
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/pages.css" />
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
-  <!-- Open Graph / link preview -->
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://estiproglobal.github.io/estipro-website/assets/brand/estipro-og.png" />
   <meta property="og:image:width" content="1200" />
@@ -20,30 +21,84 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://estiproglobal.github.io/estipro-website/assets/brand/estipro-og.png" />
 </head>
-<body>
+<body class="home-rf">
+
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand"><img src="assets/brand/estipro-logo-header.svg" alt="EstiPro Global" class="brand-logo" width="180" height="40"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li class="has-dropdown">
+          <a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="construction-estimating.html">Construction Estimating</a></li>
+            <li><a href="quantity-takeoff.html">Quantity Takeoff</a></li>
+            <li><a href="residential-estimating.html">Residential Estimating</a></li>
+            <li><a href="commercial-estimating.html">Commercial Estimating</a></li>
+            <li><a href="trade-specific-services.html">Trade-Specific Services</a></li>
+          </ul>
+        </li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="nav-cta"><a href="contact.html" class="btn btn-primary">Upload Plans</a></li>
       </ul>
     </div>
   </header>
-
-  <section class="page-hero" style="text-align:center;">
+  <section class="rf-bp rf-phero" style="text-align:center;">
     <div class="container">
       <h1>That page took a different bid.</h1>
-      <p class="lead" style="margin:0 auto;">We couldn&rsquo;t find what you were looking for &mdash; but we can still get you a quote.</p>
-      <div class="btn-row" style="justify-content:center;margin-top:24px;">
-        <a href="index.html" class="btn btn-primary btn-lg">Back to Home</a>
-        <a href="contact.html" class="btn btn-ghost-light btn-lg">Get a Quote</a>
+      <p class="rf-lead" style="margin:0 auto;">We couldn't find what you were looking for &mdash; but we can still get you a quote.</p>
+      <div class="btn-row" style="justify-content:center;margin-top:8px;">
+        <a href="index.html" class="btn btn-amber btn-lg">Back to Home</a>
+        <a href="contact.html" class="btn btn-line btn-lg">Get a Quote</a>
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><img src="assets/brand/estipro-logo-reverse.svg" alt="EstiPro Global" class="brand-logo" width="180" height="40"></a>
+          <p style="margin-top:14px;">Remote backup estimating and quantity takeoffs for U.S. general contractors and subcontractors. Send plans, get a flat quote, pay after the preview.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="construction-estimating.html">Construction Estimating</a></li>
+            <li><a href="quantity-takeoff.html">Quantity Takeoff</a></li>
+            <li><a href="residential-estimating.html">Residential Estimating</a></li>
+            <li><a href="commercial-estimating.html">Commercial Estimating</a></li>
+            <li><a href="trade-specific-services.html">Trade-Specific Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio / Samples</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">All Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:estimating@estiproglobal.com">estimating@estiproglobal.com</a></li>
+            <li><a href="tel:+16362288421">+1 (636) 228-8421</a></li>
+            <li>Serving contractors across the U.S.</li>
+            <li><a href="contact.html" class="btn btn-primary" style="margin-top:8px;">Get a Quote</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> EstiPro Global. All rights reserved.</span>
+        <span><a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms &amp; Conditions</a></span>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
