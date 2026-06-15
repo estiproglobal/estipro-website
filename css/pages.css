@@ -100,3 +100,16 @@
   .rf-phero { padding: 44px 0 48px; }
   .rf-formcard { padding: 22px; }
 }
+
+/* ---------- Contact: light "Reach us directly + The deal" card ---------- */
+.contact-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 28px; box-shadow: 0 16px 40px rgba(16,42,67,.08); }
+.contact-card h3 { color: var(--navy); margin: 0 0 16px; font-size: 1.12rem; }
+.contact-card .ci { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 15px; }
+.contact-card .ci svg { width: 20px; height: 20px; flex: none; stroke: var(--amber-dark); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 3px; }
+.contact-card .ci small { display: block; color: var(--slate-light); font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 1px; }
+.contact-card .ci a, .contact-card .ci .v { color: var(--navy); font-weight: 600; }
+.contact-card .ci a:hover { color: var(--amber-dark); }
+.contact-card hr { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
+.deal-list { list-style: none; padding: 0; margin: 0; }
+.deal-list li { display: flex; gap: 11px; align-items: flex-start; padding: 7px 0; color: var(--slate); font-size: .96rem; }
+.deal-list li svg { width: 19px; height: 19px; flex: none; stroke: var(--green); fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
